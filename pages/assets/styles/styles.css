@@ -599,6 +599,19 @@ pre code {
     max-width: 1200px;
   }
 }
+
+@media (min-width: 1024px) {
+  #subscribe {
+      background-attachment: fixed !important;
+  }
+}
+#subscribe {
+  padding: 100px;
+  background: url("https://res.cloudinary.com/jdm01263d/image/upload/v1616635487/volkslift_project/subscribe-bg.jpg") center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -611,7 +624,7 @@ pre code {
   margin-left: 0;
 }
 .no-gutters > .col,
-.no-gutters > [class*=col-] {
+.no-gutters > [className*=col-] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -2153,7 +2166,7 @@ textarea.form-control {
   margin-left: -5px;
 }
 .form-row > .col,
-.form-row > [class*=col-] {
+.form-row > [className*=col-] {
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -6128,25 +6141,7 @@ button.bg-success:focus {
   background-color: #1e7e34 !important;
 }
 
-.bg-info {
-  background-color: #0D0D0D !important;
-  /* background-image: url(../img/headerbg.png) !important; */
-  background: 
-        /* top, transparent black, faked with gradient */ 
-        linear-gradient(
-          rgba(0, 0, 0, 10.7), 
-          rgba(0, 0, 0, 0.9)
-        ),
-        url(../img/headerbg.png) !important;
-        /* bottom, image */
-        
-}
 
-a.bg-info:hover, a.bg-info:focus,
-button.bg-info:hover,
-button.bg-info:focus {
-  background-color: #117a8b !important;
-}
 
 .bg-warning {
   background-color: #fed136 !important;
@@ -10525,4 +10520,25 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .imgRadius {
   border-radius: 10px;
+}
+
+
+/* a.bg-info:hover, a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #117a8b !important;
+} */
+
+.bg-info {
+  background-color: #0D0D0D !important;
+  /*background-image: url(https://res.cloudinary.com/jdm01263d/image/upload/v1616729831/volkslift_project/headerbg.png) !important;*/
+  background: 
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 10.7), 
+          rgba(0, 0, 0, 0.9)
+        ),
+        url("https://res.cloudinary.com/jdm01263d/image/upload/v1616729831/volkslift_project/headerbg.png") !important;
+        /* bottom, image */
+        
 }

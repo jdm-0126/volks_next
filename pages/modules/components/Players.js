@@ -11,8 +11,8 @@ const Players = () => {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-auto m-auto">
-          {/* <QierPlayer
+        {/* <div className="col-auto m-2">
+          <QierPlayer
             width={370}
             height={240}
             language="en"
@@ -25,7 +25,7 @@ const Players = () => {
             srcOrigin={passenger}
           />
         </div>
-        <div className="col-auto m-auto my-2">
+        <div className="col-auto m-auto m-2">
           <QierPlayer
             width={370}
             height={240}
@@ -37,7 +37,7 @@ const Players = () => {
             srcOrigin={company}
           />
         </div>
-        <div className="col-auto m-auto my-2">
+        <div className="col-auto m-auto m-2">
           <QierPlayer
             width={370}
             height={240}
@@ -47,8 +47,8 @@ const Players = () => {
             src480p={escalators}
             src720p={escalators}
             srcOrigin={escalators}
-          />*/}
-        </div> 
+          />
+        </div>  */}
       </div>
     </div>
   );

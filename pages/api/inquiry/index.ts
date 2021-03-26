@@ -38,24 +38,24 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             }
             break;
         case 'POST':
-            const email = 'jn16h7@gmail.com';
-
+           const email = 'jn16h7@gmail.com';
+            // const email = 'andrew.laguimun@volksliftphil.com';
             let transporter = nodemailer.createTransport({
                 host: "smtp.hostinger.ph",
                 port: 587,
                 secure: false, // true for 465, false for other ports
                 auth: {
-                    user: 'marketing-testdev@saversairsolutions.com', // generated ethereal user
-                    pass: '!Access123', // generated ethereal password
+                    user: 'marketing@volksliftphil.com', 
+                    pass: '!Access123',
                 },
             });
 
             let info = await transporter.sendMail({
-                from: '"Savers Air Solution 👻" <marketing-testdev@saversairsolutions.com>', // sender address
-                to: email, // list of receivers
-                subject: "Inquiry", // Subject line
-                text: "Hello world?", // plain text body
-                html: "<b>Hello world?</b>", // html body
+                from: '"Volkslift Philippines" <marketing@volksliftphil.com>', // sender address
+                to: email,
+                subject: "Inquiry",
+                text: req.body.message,
+                html: req.body.message,
             });
             res.status(200).send(info)
         // console.log(info)

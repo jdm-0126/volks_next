@@ -7,7 +7,7 @@ const AboutUs = () => {
         <section className="page-section" id="about">
           <div className="col-lg-10 col-xs-12 ">
             <div className="d-flex mt-4">
-              <h1 className="p-3 text-primary"> About Us</h1>
+              <h1 className="p-3 text-primary text-center"> About Us</h1>
             </div>
           </div>
           <div className="col-lg-10 col-xs-12">
