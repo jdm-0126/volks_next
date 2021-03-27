@@ -38,8 +38,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             }
             break;
         case 'POST':
-           const email = 'jn16h7@gmail.com';
-            // const email = 'andrew.laguimun@volksliftphil.com';
+           const email = 'airsolutionssavers@gmail.com';
             let transporter = nodemailer.createTransport({
                 host: "smtp.hostinger.ph",
                 port: 587,
@@ -50,12 +49,27 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                 },
             });
 
+            let message = req.body.message;
+            let fullname= req.body.firstName + " " + req.body.lastName;
+            let emailAdd = req.body.email;
+            let cpNum = req.body.phone;
+            
+            // var today = new Date();
+            // var dd = String(today.getDate()).padStart(2, '0');
+            // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            // var yyyy = today.getFullYear();
+
+            // today = mm + '/' + dd + '/' + yyyy;
             let info = await transporter.sendMail({
                 from: '"Volkslift Philippines" <marketing@volksliftphil.com>', // sender address
                 to: email,
                 subject: "Inquiry",
                 text: req.body.message,
-                html: req.body.message,
+                html: `Name: ${fullname},<br />
+                        Email: ${emailAdd},<br />
+                        Phone: ${cpNum},<br />
+                        Subject: Inquiry,<br />
+                        Message:<br />${message}`,
             });
             res.status(200).send(info)
         // console.log(info)

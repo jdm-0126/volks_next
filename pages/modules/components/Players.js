@@ -11,7 +11,7 @@ const Players = () => {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        {/* <div className="col-auto m-2">
+        <div className="col-auto m-2">
           <QierPlayer
             width={370}
             height={240}
@@ -48,7 +48,7 @@ const Players = () => {
             src720p={escalators}
             srcOrigin={escalators}
           />
-        </div>  */}
+        </div> 
       </div>
     </div>
   );

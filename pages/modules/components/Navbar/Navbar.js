@@ -1,7 +1,7 @@
 import React from 'react'
 // import '../../../assets/styles/styles.css'
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         
@@ -25,3 +25,5 @@ export const Navbar = () => {
         
     )
 }
+
+export default Navbar;

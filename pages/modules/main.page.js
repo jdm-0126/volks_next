@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 
-import {Navbar} from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import AboutUs from './components/AboutUs';
 import Players from './components/Players';
 import Products from './components/Products';
